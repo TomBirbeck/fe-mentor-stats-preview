@@ -48,15 +48,6 @@ main {
     border-radius: 0.5rem;
 }
 
-/* .image {
-      border-radius: 0.5rem 0.5rem 0 0;
-    min-height: 14rem;
-    background-image: url('./images/image-header-mobile.jpg');
-    background-size: cover;
-    object-fit: cover;
-    background-repeat: no-repeat;
-  } */
-
   .image-container {
     border-radius: 0.5rem 0.5rem 0 0;
     background-color: var(--soft-violet);
@@ -128,7 +119,7 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'text image';
-        max-width: 56%;
+        max-width: 80%;
         border-radius: 0.5rem;
     }
 
@@ -139,6 +130,7 @@ main {
 
     .image {
         height: 100%;
+        width: 100%;
         background-image: url('./images/image-header-desktop.jpg');
     }
 
@@ -154,6 +146,7 @@ main {
 
     .text {
         padding-right: 3rem;
+        /* font-size: 2rem; */
     }
 
     .stats-section {
@@ -168,4 +161,12 @@ main {
         flex-direction: column;
         gap: 0.3rem;
     }
+
+    /* .stat-heading {
+        font-size: 2rem;
+    }
+
+    .stat-type {
+        font-size: 1.2rem;
+    } */
 }
