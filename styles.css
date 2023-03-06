@@ -42,14 +42,14 @@ main {
 
 .container {
     background-color: var(--dark-desaturated-blue);
-    max-width: 90%;
+    margin: 1rem;
+    max-width: 30rem;
     border-radius: 0.5rem;
 }
 
 .image {
-    border-radius: inherit;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    content: url('./images/image-header-desktop.jpg');
 }
 
 .text-area {
@@ -58,6 +58,7 @@ main {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
+    text-align: center;
 }
 
 .purple-text {
@@ -66,7 +67,7 @@ main {
 
 .heading {
     color: var(--white);
-    text-align: center;
+    /* text-align: center; */
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 1.7rem;
@@ -74,7 +75,7 @@ main {
 
 .text {
     color: var(--slightly-transparent-white-main);
-    text-align: center;
+    /* text-align: center; */
     font-family: var(--primary-font);
 }
 
@@ -88,7 +89,7 @@ main {
 .stat-heading {
     color: var(--white);
     font-family: var(--primary-font);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 .stat-type {
@@ -98,5 +99,43 @@ main {
 }
 
 .attribution {
-    display: none;
+    color: var(--white);
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text image';
+        max-width: 65rem;
+        border-radius: 0.5rem;
+    }
+
+    .image {
+        grid-area: image;
+        height: 100%;
+        border-radius: 0 0.5rem 0.5rem 0;
+        content: url('./images/image-header-desktop.jpg');
+    }
+
+    .text-area {
+        padding: 3.5rem 4rem;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .heading {
+        font-size: 2.4rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .stats-section {
+        width: 100%;
+        margin-top: 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
