@@ -48,16 +48,26 @@ main {
     border-radius: 0.5rem;
 }
 
-.image {
+/* .image {
       border-radius: 0.5rem 0.5rem 0 0;
     min-height: 14rem;
     background-image: url('./images/image-header-mobile.jpg');
-    /* background-position: center; */
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
+  } */
+
+  .image-container {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--soft-violet);
+    opacity: 0.5;
   }
 
+  .image {
+    border-radius: inherit;
+    content: url('./images/image-header-mobile.jpg');
+    mix-blend-mode: luminosity;
+  }
 
 .overlay {
     border-radius: inherit;
@@ -122,10 +132,13 @@ main {
         border-radius: 0.5rem;
     }
 
-    .image {
+    .image-container {
         grid-area: image;
-        height: 100%;
         border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .image {
+        height: 100%;
         background-image: url('./images/image-header-desktop.jpg');
     }
 
